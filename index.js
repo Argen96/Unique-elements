@@ -285,21 +285,17 @@ await createFiles(fileArray)
 
 
 
-let file=`1
-4
-2
-2
-4
-1
-3`
-let arrayFile=file.split('\n')
 
-async function uniqueValue(value){
-  console.log(value)
- const uniqueElements=new Set(value)
- return   uniqueElements
+import fsp from 'fs/promises'
+
+async function uniqueValue(file){
+  const importedFile= await fsp.readFile(file,'utf-8')
+ const array= importedFile.split('\r\n');
+ console.log(array)
+ const uniqueArray= new Set(array);
+ return uniqueArray;
 }
 
-console.log(await uniqueValue(arrayFile))
+console.log(await uniqueValue('file.unique'));
 
 
