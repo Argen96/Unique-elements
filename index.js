@@ -299,4 +299,3 @@ async function uniqueValue(file){
 console.log(await uniqueValue('file.unique'));
 
 
-console.log(10)
