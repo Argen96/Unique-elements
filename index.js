@@ -1,15 +1,12 @@
 
+//0. Remember to add a README.md inside your projects
+//1. keep your code clean
+//2. use meaningful names for files, functions and variables
+// 3. use proper indentation and align properly the brackets
+// 4. stay consistent
+ //5. use comments when needed,only if needed
+//Version one of code
 
-
-import fsp from 'fs/promises';
-
-async function uniqueValue(file){
- const importedFile = await fsp.readFile(file,'utf-8');
- const array = importedFile.split('\r\n');
- const uniqueArray = new Set(array);
- return uniqueArray;
-}
+import uniqueValue from './uniqueNumbers.js'
 
 console.log(await uniqueValue('file.unique'));
-
-
