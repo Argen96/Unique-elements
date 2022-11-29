@@ -8,3 +8,5 @@ To develop this codebase, you need to clone this repository, and run the followi
 ''' sh
 npm run dev
 '''''
+
+We have to find unique  elements at file.unique
